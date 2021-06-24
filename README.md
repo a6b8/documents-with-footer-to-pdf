@@ -92,6 +92,65 @@ Hash
 <br>
 <a href="#table-of-contents">
 <img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/documents-with-footer-to-pdf/readme/headlines/options.svg" height="55px" name="options" alt="Options">
+
+
+## Options
+### Path
+| Nr | Name | Key | Default | Type | Description |
+| :-- | :-- | :-- | :-- | :-- | :-- |
+| A.1. | Name |:path__name | `\"\"` | String | |
+| A.2. | Children Tmp Name |:path__children__tmp__name | `\"tmp-{{SALT}}\"` | String | |
+| A.3. | Children Pdf_combined Name |:path__children__pdf_combined__name | `\"0-result-{{SALT}}\"` | String | |
+
+### Footer
+| Nr | Name | Key | Default | Type | Description |
+| :-- | :-- | :-- | :-- | :-- | :-- |
+| B.1. | Position Top |:footer__position__top | `[0, 20]` | Array | |
+| B.2. | Position Bottom |:footer__position__bottom | `[0, 10]` | Array | |
+| B.3. | Table Left Top Text |:footer__table__left__top__text | `\"<<--FILENAME-->>\"` | String | |
+| B.4. | Table Left Bottom Text |:footer__table__left__bottom__text | `\"\"` | String | |
+| B.5. | Table Center Top Text |:footer__table__center__top__text | `\"\"` | String | |
+| B.6. | Table Center Bottom Text |:footer__table__center__bottom__text | `\"\"` | String | |
+| B.7. | Table Right Top Text |:footer__table__right__top__text | `\"<<--TIMESTAMP-->>\"` | String | |
+| B.8. | Table Right Bottom Text |:footer__table__right__bottom__text | `\"<<--PAGE_CURRENT-->> from <<--PAGE_TOTAL-->>\"` | String | |
+
+### Selectors
+| Nr | Name | Key | Default | Type | Description |
+| :-- | :-- | :-- | :-- | :-- | :-- |
+| C.1. | Timestamp Gsub |:selectors__timestamp__gsub | `\"<<--TIMESTAMP-->>\"` | String | |
+| C.2. | Timestamp Key |:selectors__timestamp__key | `timestamp` | Symbol | |
+| C.3. | Timestamp Strf |:selectors__timestamp__strf | `\"%d.%m.%Y\"` | String | |
+| C.4. | Page_current Gsub |:selectors__page_current__gsub | `\"<<--PAGE_CURRENT-->>\"` | String | |
+| C.5. | Page_current Key |:selectors__page_current__key | `page__current` | Symbol | |
+| C.6. | Page_total Gsub |:selectors__page_total__gsub | `\"<<--PAGE_TOTAL-->>\"` | String | |
+| C.7. | Page_total Key |:selectors__page_total__key | `page__total` | Symbol | |
+| C.8. | Enumerator_original Gsub |:selectors__enumerator_original__gsub | `\"<<--ENUMERATOR_ORIGINAL-->>\"` | String | |
+| C.9. | Enumerator_original Key |:selectors__enumerator_original__key | `enumerator__original` | Symbol | |
+| C.10. | Enumerator_integer Gsub |:selectors__enumerator_integer__gsub | `\"<<--ENUMERATOR_INTEGER-->>\"` | String | |
+| C.11. | Enumerator_integer Key |:selectors__enumerator_integer__key | `enumerator__integer` | Symbol | |
+| C.12. | Enumerator_char Gsub |:selectors__enumerator_char__gsub | `\"<<--ENUMERATOR_CHAR-->>\"` | String | |
+| C.13. | Enumerator_char Key |:selectors__enumerator_char__key | `enumerator__char` | Symbol | |
+| C.14. | Enumerator_roman Gsub |:selectors__enumerator_roman__gsub | `\"<<--ENUMERATOR_ROMAN-->>\"` | String | |
+| C.15. | Enumerator_roman Key |:selectors__enumerator_roman__key | `enumerator__roman` | Symbol | |
+| C.16. | Filename Gsub |:selectors__filename__gsub | `\"<<--FILENAME-->>\"` | String | |
+| C.17. | Filename Key |:selectors__filename__key | `filename` | Symbol | |
+| C.18. | Path Gsub |:selectors__path__gsub | `\"<<--PATH-->>\"` | String | |
+| C.19. | Path Key |:selectors__path__key | `path` | Symbol | |
+| C.20. | Heading Gsub |:selectors__heading__gsub | `\"<<--HEADLINE-->>\"` | String | |
+| C.21. | Heading Key |:selectors__heading__key | `heading` | Symbol | |
+| C.22. | Subheading Gsub |:selectors__subheading__gsub | `\"<<--SUBHEADING-->>\"` | String | |
+| C.23. | Subheading Key |:selectors__subheading__key | `subheading` | Symbol | |
+
+
+### Params
+| Nr | Name | Key | Default | Type | Description |
+| :-- | :-- | :-- | :-- | :-- | :-- |
+| D.1. | Footer Font_size |:params__footer__font_size | `9` | Integer | |
+| D.2. | Document Width |:params__document__width | `500` | Integer | |
+| D.3. | Image Density |:params__image__density | `300` | Integer | |
+| D.4. | Search Subfolders |:params__search__subfolders | `false` | FalseClass | |
+| D.5. | Search Suffixs |:params__search__suffixs | `[\"jpg\", \"png\", \"pdf\"]` | Array | |
+| D.6. | Console Length |:params__console__length | `50` | Integer | |
 </a>
 <br>
 <br>

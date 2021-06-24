@@ -49,15 +49,15 @@ module DocumentsWithFooterToPdf
               text: '<<--FILENAME-->>'
             },
             bottom: {
-              text: '<<--PATH-->>'
+              text: ''
             }
           },
           center: {
             top: {
-              text: 'Antrag'
+              text: ''
             },
             bottom: {
-              text: 'Andreas Banholzer'
+              text: ''
             }
           },
           right: {
@@ -142,14 +142,15 @@ module DocumentsWithFooterToPdf
 
 
   def self.generate( folder, silent, options={} )
-    if self.validate_generate( folder, silent, options )
-      template = self.get_options()
-      hash = Marshal.load( Marshal.dump( template ) )
+    
+    hash = Marshal.load( Marshal.dump( self.get_options() ) )
+    if self.validate_generate( folder, silent, options, hash )
+            
       hash[:path][:root] = folder
-
       hash[:params][:console][:silent] = silent == :silent ? true : false
       hash[:params][:console][:mode] = !hash[:params][:console][:silent] ? silent : ''
       hash[:path] = LocalPathBuilder.generate( hash[:path], :silent, Time.now.to_i.to_s )
+      hash = self.options_update( options, hash, 'set_options' )  
 
       self.footer_image( hash )
       prepares = self.footer_prepare( hash )
@@ -168,7 +169,108 @@ module DocumentsWithFooterToPdf
   end
 
 
-  def self.validate_generate( folder, silent, options )
+  def self.options_update( vars, template, mode )
+    def self.str_difference( a, b )
+      a = a.to_s.downcase.split( '_' ).join( '' )
+      b = b.to_s.downcase.split( '_' ).join( '' )
+      longer = [ a.size, b.size ].max
+      same = a
+        .each_char
+        .zip( b.each_char )
+        .select { | a, b | a == b }
+        .size
+      ( longer - same ) / a.size.to_f
+    end
+
+
+    allow_list = [
+      :path__name,
+      :path__children__tmp__name,
+      :path__children__pdf_combined__name,
+      :footer__position__top,
+      :footer__position__bottom,
+      :footer__table__left__top__text,
+      :footer__table__left__bottom__text,
+      :footer__table__center__top__text,
+      :footer__table__center__bottom__text,
+      :footer__table__right__top__text,
+      :footer__table__right__bottom__text,
+      :selectors__timestamp__gsub,
+      :selectors__timestamp__key,
+      :selectors__timestamp__strf,
+      :selectors__page_current__gsub,
+      :selectors__page_current__key,
+      :selectors__page_total__gsub,
+      :selectors__page_total__key,
+      :selectors__enumerator_original__gsub,
+      :selectors__enumerator_original__key,
+      :selectors__enumerator_integer__gsub,
+      :selectors__enumerator_integer__key,
+      :selectors__enumerator_char__gsub,
+      :selectors__enumerator_char__key,
+      :selectors__enumerator_roman__gsub,
+      :selectors__enumerator_roman__key,
+      :selectors__filename__gsub,
+      :selectors__filename__key,
+      :selectors__path__gsub,
+      :selectors__path__key,
+      :selectors__heading__gsub,
+      :selectors__heading__key,
+      :selectors__subheading__gsub,
+      :selectors__subheading__key,
+      :params__footer__font_size,
+      :params__document__width,
+      :params__image__density,
+      :params__search__subfolders,
+      :params__search__suffixs,
+      :params__console__length
+    ]
+
+    messages = []
+    _options = Marshal.load( Marshal.dump( template ) )
+    
+    vars.keys.each do | key |
+      if allow_list.include?( key ) 
+  
+        keys = key.to_s.split( '__' ).map { | a | a.to_sym }
+        case( keys.length )
+          when 1
+            _options[ keys[ 0 ] ] = vars[ key ]
+          when 2
+            _options[ keys[ 0 ] ][ keys[ 1 ] ] = vars[ key ]
+          when 3
+            _options[ keys[ 0 ] ][ keys[ 1 ] ][ keys[ 2 ] ] = vars[ key ]
+          when 4
+            _options[ keys[ 0 ] ][ keys[ 1 ] ][ keys[ 2 ] ][ keys[ 3 ] ] = vars[ key ]
+          when 5
+            _options[ keys[ 0 ] ][ keys[ 1 ] ][ keys[ 2 ] ][ keys[ 3 ] ][ keys[ 4 ] ] = vars[ key ]
+          when 6
+            _options[ keys[ 0 ] ][ keys[ 1 ] ][ keys[ 2 ] ][ keys[ 3 ] ][ keys[ 4 ] ][ keys[ 5   ] ] = vars[ key ]
+        end
+      else
+        nearest = allow_list
+          .map { | word | { score: self.str_difference( key, word ), word: word } }
+          .min_by { | item | item[:score] }
+
+        message = "\"#{key}\" is not a valid key, did you mean \"<--similar-->\"?"
+        message = message.gsub( '<--similar-->', nearest[:word].to_s )
+        messages.push( message )
+      end
+    end
+    
+    result = nil
+    case mode
+      when 'check_options'
+        result = messages
+      when 'set_options'
+        result = _options
+    end
+
+    return result
+  end
+
+
+  def self.validate_generate( folder, silent, vars, template )
     messages = {
       folder: [],
       silent: [],
