@@ -11,157 +11,170 @@ module DocumentsWithFooterToPdf
   class Error < StandardError; end
   # Your code goes here...
 
-  @TEMPLATE = {
-    path: {
-      root: nil,
-      name: '',
-      children: {
-        tmp: {
-          name: 'tmp-{{SALT}}',
-          children: {
-            jpg: {
-              name: '0-jpg'
-            },
-              pdf_single: {
-                name: '1-pdf-single--w-footer'
-            }
-          }
-        },
-        pdf_combined: {
-          name: '0-result',
-          files: {
-            result: {
-              name: '0-result-{{SALT}}.pdf'
-            }
-          }
-        }
-      }
-    },
-    footer: {
-      position: {
-        top: [ 0, 20 ],
-        bottom: [ 0, 10 ]
-      },
-      table: {
-        left: {
-          top: {
-            text: '<<--FILENAME-->>'
-          },
-          bottom: {
-            text: '<<--PATH-->>'
-          }
-        },
-        center: {
-          top: {
-            text: 'Antrag'
-          },
-          bottom: {
-            text: 'Andreas Banholzer'
-          }
-        },
-        right: {
-          top: {
-            text: '<<--TIMESTAMP-->>'
-          },
-          bottom: {
-            text: '<<--PAGE_CURRENT-->> from <<--PAGE_TOTAL-->>'
-          }
-        }
-      }
-    },
-    selectors: {
-      timestamp: {
-        gsub: '<<--TIMESTAMP-->>',
-        key: :timestamp,
-        strf: '%d.%m.%Y',
-      },
-      page_current: {
-        gsub: '<<--PAGE_CURRENT-->>',
-        key: :page__current
-      },
-      page_total: {
-        gsub: '<<--PAGE_TOTAL-->>',
-        key: :page__total
-      },
-      enumerator_original: {
-        gsub: '<<--ENUMERATOR_ORIGINAL-->>',
-        key: :enumerator__original
-      },
-      enumerator_integer: {
-        gsub: '<<--ENUMERATOR_INTEGER-->>',
-        key: :enumerator__integer
-      },
-      enumerator_char: {
-        gsub: '<<--ENUMERATOR_CHAR-->>',
-        key: :enumerator__char
-      },
-      enumerator_roman: {
-        gsub: '<<--ENUMERATOR_ROMAN-->>',
-        key: :enumerator__roman
-      },
-      filename: {
-        gsub: '<<--FILENAME-->>',
-        key: :filename
-      },
+  def self.get_options()
+    return {
       path: {
-        gsub: '<<--PATH-->>',
-        key: :path
+        root: nil,
+        name: '',
+        children: {
+          tmp: {
+            name: 'tmp-{{SALT}}',
+            children: {
+              jpg: {
+                name: '0-jpg'
+              },
+                pdf_single: {
+                  name: '1-pdf-single--w-footer'
+              }
+            }
+          },
+          pdf_combined: {
+            name: '0-result-{{SALT}}',
+            files: {
+              result: {
+                name: '0-result-{{SALT}}.pdf'
+              }
+            }
+          }
+        }
       },
-      heading: {
-        gsub: '<<--HEADLINE-->>',
-        key: :heading
-      },
-      subheading: {
-        gsub: '<<--SUBHEADING-->>',
-        key: :subheading
-      }
-    },
-    params: {
       footer: {
-        font_size: 9
+        position: {
+          top: [ 0, 20 ],
+          bottom: [ 0, 10 ]
+        },
+        table: {
+          left: {
+            top: {
+              text: '<<--FILENAME-->>'
+            },
+            bottom: {
+              text: '<<--PATH-->>'
+            }
+          },
+          center: {
+            top: {
+              text: 'Antrag'
+            },
+            bottom: {
+              text: 'Andreas Banholzer'
+            }
+          },
+          right: {
+            top: {
+              text: '<<--TIMESTAMP-->>'
+            },
+            bottom: {
+              text: '<<--PAGE_CURRENT-->> from <<--PAGE_TOTAL-->>'
+            }
+          }
+        }
       },
-      document: {
-        width: 500
+      selectors: {
+        timestamp: {
+          gsub: '<<--TIMESTAMP-->>',
+          key: :timestamp,
+          strf: '%d.%m.%Y',
+        },
+        page_current: {
+          gsub: '<<--PAGE_CURRENT-->>',
+          key: :page__current
+        },
+        page_total: {
+          gsub: '<<--PAGE_TOTAL-->>',
+          key: :page__total
+        },
+        enumerator_original: {
+          gsub: '<<--ENUMERATOR_ORIGINAL-->>',
+          key: :enumerator__original
+        },
+        enumerator_integer: {
+          gsub: '<<--ENUMERATOR_INTEGER-->>',
+          key: :enumerator__integer
+        },
+        enumerator_char: {
+          gsub: '<<--ENUMERATOR_CHAR-->>',
+          key: :enumerator__char
+        },
+        enumerator_roman: {
+          gsub: '<<--ENUMERATOR_ROMAN-->>',
+          key: :enumerator__roman
+        },
+        filename: {
+          gsub: '<<--FILENAME-->>',
+          key: :filename
+        },
+        path: {
+          gsub: '<<--PATH-->>',
+          key: :path
+        },
+        heading: {
+          gsub: '<<--HEADLINE-->>',
+          key: :heading
+        },
+        subheading: {
+          gsub: '<<--SUBHEADING-->>',
+          key: :subheading
+        }
       },
-      image: {
-        density: 300
-      },
-      search: {
-        subfolders: true
+      params: {
+        footer: {
+          font_size: 9
+        },
+        document: {
+          width: 500
+        },
+        image: {
+          density: 300
+        },
+        search: {
+          subfolders: false,
+          suffixs: [ 'jpg', 'png', 'pdf' ]
+        },
+        console: {
+          silent: nil,
+          mode: nil,
+          length: 50
+        }
       }
     }
-  }
-
-
-  def self.get_options()
-    return @TEMPLATE
   end
 
 
-  def self.generate( root )
-    debug = true
-    hash = Marshal.load( Marshal.dump( @TEMPLATE ) )
+  def self.generate( root, silent, options={} )
+
+    puts File.directory?(root)
+
+    template = self.get_options()
+    hash = Marshal.load( Marshal.dump( template ) )
     hash[:path][:root] = root
+
+    hash[:params][:console][:silent] = silent == :silent ? true : false
+    hash[:params][:console][:mode] = !hash[:params][:console][:silent] ? silent : ''
     hash[:path] = LocalPathBuilder.generate( hash[:path], :silent, Time.now.to_i.to_s )
 
-    self.footer_image( hash, debug )
-    prepares = self.footer_prepare( hash, debug )
-    self.footer_generate( prepares, hash, debug )
-    self.footer_merge( hash, debug )
-    #FileUtils.rm_rf( hash[:path][:children][:tmp][:full] )
-    debug ? print( 'finished' ) : ''
+    self.footer_image( hash )
+    prepares = self.footer_prepare( hash )
+    self.footer_generate( prepares, hash )
+    self.footer_merge( hash )
+    FileUtils.rm_rf( hash[:path][:children][:tmp][:full] )
   end
 
 
   private
 
-  def self.footer_image( obj, debug )
+
+  def self.debug( obj )
+    return obj[:params][:console][:silent]
+  end
+
+
+  def self.footer_image( obj )
     files = []
 
     star = '*'
     obj[:params][:search][:subfolders] ? star = '**/*' : ''
-
-    [ 'jpg', 'png', 'pdf' ]
+    obj[:params][:search][:suffixs]
       .each { | a | files += Dir[ "#{obj[:path][:full]}#{star}.#{a}" ].sort }
 
     t = files
@@ -170,10 +183,9 @@ module DocumentsWithFooterToPdf
       .map { | a | ".#{a[ 0 ]} #{a[ 1 ]}" }
       .join(', ')
 
-    puts "Find Documents"
-    puts "- #{files.length} Files (#{t})"
+    !self.debug( obj ) ? print( "1. \tFind Files (#{files.length} Total | #{t}):" ) : ''
 
-    files.each do | file |
+    files.each.with_index do | file, index |
         a = obj[:params][:image][:density].to_s
         b = obj[:path][:children][:tmp][:children][:jpg][:full]
         c = File.basename( file ).split( '.' )[ 0..-2 ].join( '.' )
@@ -182,14 +194,16 @@ module DocumentsWithFooterToPdf
         out = IO.popen( cmd )
         out.readlines
 
-        #debug ? print( '.' ) : ''
+        self.console_mode( file, index, obj )
     end
-    #debug ? print( ' >> ' ) : ''
+
+    !self.debug( obj ) ? puts : ''
+
     return true
   end
 
 
-  def self.footer_prepare( obj, debug )
+  def self.footer_prepare( obj )
     def self.roman_numerals( integer )
       def self.next_lower_key( integer, values )
         arabics = values.keys
@@ -309,10 +323,10 @@ module DocumentsWithFooterToPdf
   end
 
 
-  def self.footer_generate( prepares, obj, debug )
-    puts "- Write Footer Data"
-    debug ? print( 'B ' ) : ''
-    prepares.each do | prepare |
+  def self.footer_generate( prepares, obj )
+    !self.debug( obj ) ? print( "2.\tWrite Footer:" ) : ''
+
+    prepares.each.with_index do | prepare, index |
       footer = Marshal.load( Marshal.dump( obj[:footer] ) )
       footer[:table].keys.each do | align |
         footer[:table][ align ].keys.each do | position |
@@ -330,7 +344,6 @@ module DocumentsWithFooterToPdf
               end
             end
           end
-          print('.')
         end
       end
 
@@ -352,15 +365,18 @@ module DocumentsWithFooterToPdf
           end
         end
       end
+
+      self.console_mode( prepare[:file][:from], index, obj )
     end
 
-    debug ? print( ' >> ' ) : ''
+    !self.debug( obj ) ? puts : ''
+
     return true
   end
 
 
-  def self.footer_merge( obj, debug )
-    puts "- Merge into one Object"
+  def self.footer_merge( obj )
+    !self.debug( obj ) ? puts( "3.\tMerge" ) : ''
     
     files = Dir[ obj[:path][:children][:tmp][:children][:pdf_single][:full] + '*.pdf' ].sort
     
@@ -373,5 +389,30 @@ module DocumentsWithFooterToPdf
     pdf.save( p )
     
     return true
+  end
+
+
+  def self.console_mode( file, index, obj )
+    if !self.debug( obj )
+      case obj[:params][:console][:mode]
+        when :short
+          index%obj[:params][:console][:length] == 0 ? print( "\n\t" ) : ''
+          print( '.' )
+        when :detail
+          puts ( "\t" )
+          p = ''
+          if file.length > obj[:params][:console][:length]
+            _start = obj[:params][:console][:length] / 5
+            _end = obj[:params][:console][:length] - _start
+            p += file[ 0, _start ]
+            p += '...'
+            p += file[ file.length - _end, file.length]
+          else
+            p = file
+          end
+          print( "\t- #{p}" )
+      end
+    else
+    end
   end
 end
