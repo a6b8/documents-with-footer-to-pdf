@@ -234,17 +234,17 @@ Filename: ```C--HEADING--Subheadline.png```
 
 | Selector | Example | Description |
 | :--- | :--- | :--- |
-| "<<--TIMESTAMP-->>" | 24.05.2021 | Show current Timestamp, to change for format use option: :selectors__timestamp__strf |
-| "<<--PAGE_CURRENT-->>" | ```1``` | Show current Page |
-| "<<--PAGE_TOTAL-->>" | ```3``` | Show total Page size |
-| "<<--ENUMERATOR_ORIGINAL-->>" | ```"C"``` | Show original Enumerator |
-| "<<--ENUMERATOR_INTEGER-->>" | ```3``` | Show Enumerator as Integer |
-| "<<--ENUMERATOR_CHAR-->>" | ```"C"``` | Show Enumerator as Char |
-| "<<--ENUMERATOR_ROMAN-->>" | ```"III"``` | Show Enumerator in Roman Letters |
-| "<<--FILENAME-->>" | ```"C--HEADING--Subheadline.png"``` | Show filename |
-| "<<--PATH-->>" | ```"../C--HEADING--Subheadline"``` | Show file path|
-| "<<--HEADLINE-->>" | ```"HEADING"``` | Show Headline |
-| "<<--SUBHEADING-->>" | ```"Subheading"``` | Show Subheading |
+| ```"<<--TIMESTAMP-->>"``` | 24.05.2021 | Show current Timestamp, to change for format use option: :selectors__timestamp__strf |
+| ```"<<--PAGE_CURRENT-->>"``` | ```1``` | Show current Page |
+| ```"<<--PAGE_TOTAL-->>"``` | ```3``` | Show total Page size |
+| ```"<<--ENUMERATOR_ORIGINAL-->>"``` | ```"C"``` | Show original Enumerator |
+| ```"<<--ENUMERATOR_INTEGER-->>"``` | ```3``` | Show Enumerator as Integer |
+| ```"<<--ENUMERATOR_CHAR-->>"``` | ```"C"``` | Show Enumerator as Char |
+| ```"<<--ENUMERATOR_ROMAN-->>"``` | ```"III"``` | Show Enumerator in Roman Letters |
+| ```"<<--FILENAME-->>"``` | ```"C--HEADING--Subheadline.png"``` | Show filename |
+| ```"<<--PATH-->>"``` | ```"../C--HEADING--Subheadline"``` | Show file path|
+| ```"<<--HEADLINE-->>"``` | ```"HEADING"``` | Show Headline |
+| ```"<<--SUBHEADING-->>"``` | ```"Subheading"``` | Show Subheading |
 
 <br>
 <br>
