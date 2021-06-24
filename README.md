@@ -10,21 +10,13 @@ Add a footer to each document and create a single .pdf file all in one command.
 <img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/documents-with-footer-to-pdf/readme/headlines/examples.svg" height="55px" name="examples" alt="Examples">
 </a>
 
-<img src="https://github.com/a6b8/a6b8/blob/main/docs/documents-with-footer-to-pdf/readme/examples/a.jpg?raw=true">
 
-```ruby
-    { 
-        footer__table__left__top__text: '<<--ENUMERATOR_ROMAN-->>. <<--HEADLINE-->>',
-        footer__table__left__bottom__text: '<<--SUBHEADING-->>',
-        footer__table__center__top__text: 'Application',
-        footer__table__center__bottom__text: 'John Doe',
-        footer__table__right__top__text: '<<--TIMESTAMP-->>',
-        footer__table__right__bottom__text: '<<--PAGE_CURRENT-->> of <<--PAGE_TOTAL-->>',
-        selectors__timestamp__strf: '%A, %e %B %Y'
-    }
-```
 
-<img src="https://github.com/a6b8/a6b8/blob/main/docs/documents-with-footer-to-pdf/readme/examples/a.jpg?raw=true">
+
+### Example 1
+
+**Filename**: 
+```5--HEADING--Subheadline.png```
 
 ```ruby
     { 
@@ -37,7 +29,34 @@ Add a footer to each document and create a single .pdf file all in one command.
     }
 ```
 
+**Output**
 <img src="https://github.com/a6b8/a6b8/blob/main/docs/documents-with-footer-to-pdf/readme/examples/a.jpg?raw=true">
+
+
+### Example 2
+
+**Filename**: 
+```5--HEADING--Subheadline.png```
+
+```ruby
+    { 
+        footer__table__left__top__text: '<<--ENUMERATOR_ROMAN-->>. <<--HEADLINE-->>',
+        footer__table__left__bottom__text: '<<--SUBHEADING-->>',
+        footer__table__center__top__text: 'Application',
+        footer__table__center__bottom__text: 'John Doe',
+        footer__table__right__top__text: '<<--TIMESTAMP-->>',
+        footer__table__right__bottom__text: '<<--PAGE_CURRENT-->> of <<--PAGE_TOTAL-->>',
+        selectors__timestamp__strf: '%A, %e %B %Y'
+    }
+```
+**Output**
+<img src="https://github.com/a6b8/a6b8/blob/main/docs/documents-with-footer-to-pdf/readme/examples/b.jpg?raw=true">
+
+
+### Example 3
+
+**Filename**: 
+```5--HEADING--Subheadline.png```
 
 ```ruby
     { 
@@ -50,6 +69,8 @@ Add a footer to each document and create a single .pdf file all in one command.
     }
 ```
 
+<img src="https://github.com/a6b8/a6b8/blob/main/docs/documents-with-footer-to-pdf/readme/examples/c.jpg?raw=true">
+
 <br>
 <br>
 <br>
@@ -57,6 +78,7 @@ Add a footer to each document and create a single .pdf file all in one command.
 <img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/documents-with-footer-to-pdf/readme/headlines/table-of-contents.svg" height="55px" name="table-of-contents" alt="Table of Contents">
 </a>
 <br>
+
 1. [Quickstart](#quickstart)<br>
 2. [Parameters](#parameters)<br>
 3. [Options](#options)<br>
@@ -74,7 +96,16 @@ Add a footer to each document and create a single .pdf file all in one command.
 </a>
 
 ```ruby
+    require 'documents_with_footer_to_pdf'
 
+
+    your_folder = './1-test/'
+
+    DocumentsWithFooterToPdf.generate( 
+        your_folder, 
+        :short, 
+        {}
+) 
 ```
 <br>
 <br>
