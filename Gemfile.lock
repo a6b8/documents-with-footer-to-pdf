@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    documents_with_footer_to_pdf (0.1.1)
+    documents_with_footer_to_pdf (0.1.2)
       combine_pdf (~> 1.0.21)
       fileutils
       local_path_builder (~> 0.1.1)

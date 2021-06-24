@@ -33,7 +33,7 @@ Gem::Specification.new do |spec|
   # spec.add_dependency "example-gem", "~> 1.0"
 
   spec.add_dependency 'local_path_builder', "~> 0.1.1"
-  spec.add_dependency 'fileutils'
+  spec.add_dependency 'fileutils', "~> 1.5.0"
   spec.add_dependency 'combine_pdf', "~> 1.0.21"
   spec.add_dependency 'prawn', "~> 2.4.0"
 
