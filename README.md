@@ -80,12 +80,13 @@ Add a footer to each document and create a single .pdf file all in one command.
 1. [Quickstart](#quickstart)<br>
 2. [Parameters](#parameters)<br>
 3. [Options](#options)<br>
-4. [Contributing](#contributing)<br>
-5. [Limitations](#limitations)<br>
-6. [Credits](#credits)<br>
-7. [License](#license)<br>
-8. [Code of Conduct](#code-of-conduct)<br>
-9. [Support my Work](#support-my-work)<br>
+4. [Selectors](#selectors)<br>
+5. [Contributing](#contributing)<br>
+6. [Limitations](#limitations)<br>
+7. [Credits](#credits)<br>
+8. [License](#license)<br>
+9. [Code of Conduct](#code-of-conduct)<br>
+10. [Support my Work](#support-my-work)<br>
 
 <br>
 <br>
@@ -225,8 +226,6 @@ More Information on ```strf``` format: https://apidock.com/ruby/DateTime/strftim
 <a href="#table-of-contents">
 <img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/documents-with-footer-to-pdf/readme/headlines/selectors.svg" height="55px" name="selectors" alt="Selectors">
 </a>
-
-
 
 Filename: ```C--HEADING--Subheadline.png```
 
