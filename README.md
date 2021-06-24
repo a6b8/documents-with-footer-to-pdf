@@ -100,6 +100,7 @@ Boolean
 <br>
 <a href="#table-of-contents">
 <img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/documents-with-footer-to-pdf/readme/headlines/options.svg" height="55px" name="options" alt="Options">
+</a>
 
 ### Path
 | Nr | Name | Key | Default | Type | Description |
@@ -137,7 +138,7 @@ Boolean
 | C.11. | Heading Gsub |:selectors__heading__gsub | `"<<--HEADLINE-->>"` | String | Change marker for headline |
 | C.12. | Subheading Gsub |:selectors__subheading__gsub | `"<<--SUBHEADING-->>"` | String | Change marker for sub headline |
 
-More Information on ``strf```format: https://apidock.com/ruby/DateTime/strftime
+More Information on ```strf``` format: https://apidock.com/ruby/DateTime/strftime
 
 ### Params
 | Nr | Name | Key | Default | Type | Description |
