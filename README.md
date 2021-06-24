@@ -227,14 +227,6 @@ More Information on ```strf``` format: https://apidock.com/ruby/DateTime/strftim
 <img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/documents-with-footer-to-pdf/readme/headlines/selectors.svg" height="55px" name="selectors" alt="Selectors">
 </a>
 
-### Filename Selectors
-Use double hyphens '--' as limiter 
-
-**Struct**:
-#{SINGLE DIGIT/CHAR}--#{HEADLINE}--#{SUBHEADING}.suffix
-
-**Example Filename**: ```C--HEADING--Subheadline.png```
-
 | Selector | Example | Description |
 | :--- | :--- | :--- |
 | ```"<<--TIMESTAMP-->>"``` | 24.05.2021 | Show current Timestamp, to change for format use option: :selectors__timestamp__strf |
@@ -248,6 +240,14 @@ Use double hyphens '--' as limiter
 | ```"<<--PATH-->>"``` | ```"../C--HEADING--Subheadline"``` | Show file path|
 | ```"<<--HEADLINE-->>"``` | ```"HEADING"``` | Show Headline |
 | ```"<<--SUBHEADING-->>"``` | ```"Subheading"``` | Show Subheading |
+
+### Filename Selectors
+Use double hyphens '--' as limiter 
+
+**Struct**:
+#{SINGLE DIGIT/CHAR}--#{HEADLINE}--#{SUBHEADING}.suffix
+
+**Example Filename**: ```C--HEADING--Subheadline.png```
 
 <br>
 <br>
