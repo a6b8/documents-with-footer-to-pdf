@@ -9,6 +9,47 @@ Add a footer to each document and create a single .pdf file all in one command.
 <a href="#table-of-contents">
 <img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/documents-with-footer-to-pdf/readme/headlines/examples.svg" height="55px" name="examples" alt="Examples">
 </a>
+
+<img src="https://github.com/a6b8/a6b8/blob/main/docs/documents-with-footer-to-pdf/readme/examples/a.jpg?raw=true">
+
+```ruby
+    { 
+        footer__table__left__top__text: '<<--ENUMERATOR_ROMAN-->>. <<--HEADLINE-->>',
+        footer__table__left__bottom__text: '<<--SUBHEADING-->>',
+        footer__table__center__top__text: 'Application',
+        footer__table__center__bottom__text: 'John Doe',
+        footer__table__right__top__text: '<<--TIMESTAMP-->>',
+        footer__table__right__bottom__text: '<<--PAGE_CURRENT-->> of <<--PAGE_TOTAL-->>',
+        selectors__timestamp__strf: '%A, %e %B %Y'
+    }
+```
+
+<img src="https://github.com/a6b8/a6b8/blob/main/docs/documents-with-footer-to-pdf/readme/examples/a.jpg?raw=true">
+
+```ruby
+    { 
+        footer__table__left__top__text: '<<--ENUMERATOR_INTEGER-->>. <<--HEADLINE-->>',
+        footer__table__left__bottom__text: '<<--TIMESTAMP-->>',
+        footer__table__center__top__text: '',
+        footer__table__center__bottom__text: '',
+        footer__table__right__top__text: '<<--PAGE_CURRENT-->>',
+        footer__table__right__bottom__text: '',
+    }
+```
+
+<img src="https://github.com/a6b8/a6b8/blob/main/docs/documents-with-footer-to-pdf/readme/examples/a.jpg?raw=true">
+
+```ruby
+    { 
+        footer__table__left__top__text: '<<--TIMESTAMP-->>',
+        footer__table__left__bottom__text: '',
+        footer__table__center__top__text: '<<--ENUMERATOR_CHAR-->> <<--HEADLINE-->>',
+        footer__table__center__bottom__text: '',
+        footer__table__right__top__text: '<<--PAGE_CURRENT-->>',
+        footer__table__right__bottom__text: '',
+    }
+```
+
 <br>
 <br>
 <br>

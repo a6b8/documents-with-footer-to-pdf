@@ -396,10 +396,12 @@ module DocumentsWithFooterToPdf
         if /\A[-+]?[0-9]+\z/.match( item[:enumerator][:original] ).to_a.length != 0
           item[:enumerator][:style] = :integer
           item[:enumerator][:integer] = item[:enumerator][:original].to_i
+          item[:enumerator][:char] = alpha[ item[:enumerator][:integer]-1 ]
           item[:enumerator][:roman] = self.roman_numerals( item[:enumerator][:integer] )
         else
           item[:enumerator][:style] = :char
           item[:enumerator][:char] = item[:enumerator][:original].upcase
+          item[:enumerator][:integer] =alpha.index( item[:enumerator][:char] ) + 1
           item[:enumerator][:roman] = self.roman_numerals( alpha.index( item[:enumerator][:char] ) + 1 )
         end
       else
