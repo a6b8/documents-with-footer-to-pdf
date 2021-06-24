@@ -227,12 +227,13 @@ More Information on ```strf``` format: https://apidock.com/ruby/DateTime/strftim
 <img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/documents-with-footer-to-pdf/readme/headlines/selectors.svg" height="55px" name="selectors" alt="Selectors">
 </a>
 
-> Use double hyphens '--' as limiter 
+### Filename Selectors
+Use double hyphens '--' as limiter 
 
-**Struct**:<br>
-[SINGLE DIGIT/CHAR ENUMERATOR]--[HEADLINE]--[SUBHEADING].suffix
+**Struct**:
+#{SINGLE DIGIT/CHAR}--#{HEADLINE}--#{SUBHEADING}.suffix
 
-**Filename**: ```C--HEADING--Subheadline.png```
+**Example Filename**: ```C--HEADING--Subheadline.png```
 
 | Selector | Example | Description |
 | :--- | :--- | :--- |
