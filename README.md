@@ -2,7 +2,7 @@
 <img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/documents-with-footer-to-pdf/readme/headlines/documents-with-footer-to-pdf.svg" height="55px" name="Documents with Footer to Pdf for Ruby" alt="# Documents with Footer to Pdf for Ruby">
 </a>
 
-Short Description Text 
+Add a footer to each document and create a single .pdf file all in one command.
 <br>
 <br>
 <br>
