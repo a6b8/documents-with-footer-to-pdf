@@ -141,23 +141,22 @@ module DocumentsWithFooterToPdf
   end
 
 
-  def self.generate( root, silent, options={} )
+  def self.generate( folder, silent, options={} )
+    if self.validate_generate( folder, silent, options )
+      template = self.get_options()
+      hash = Marshal.load( Marshal.dump( template ) )
+      hash[:path][:root] = folder
 
-    puts File.directory?(root)
+      hash[:params][:console][:silent] = silent == :silent ? true : false
+      hash[:params][:console][:mode] = !hash[:params][:console][:silent] ? silent : ''
+      hash[:path] = LocalPathBuilder.generate( hash[:path], :silent, Time.now.to_i.to_s )
 
-    template = self.get_options()
-    hash = Marshal.load( Marshal.dump( template ) )
-    hash[:path][:root] = root
-
-    hash[:params][:console][:silent] = silent == :silent ? true : false
-    hash[:params][:console][:mode] = !hash[:params][:console][:silent] ? silent : ''
-    hash[:path] = LocalPathBuilder.generate( hash[:path], :silent, Time.now.to_i.to_s )
-
-    self.footer_image( hash )
-    prepares = self.footer_prepare( hash )
-    self.footer_generate( prepares, hash )
-    self.footer_merge( hash )
-    FileUtils.rm_rf( hash[:path][:children][:tmp][:full] )
+      self.footer_image( hash )
+      prepares = self.footer_prepare( hash )
+      self.footer_generate( prepares, hash )
+      self.footer_merge( hash )
+      FileUtils.rm_rf( hash[:path][:children][:tmp][:full] )
+    end
   end
 
 
@@ -166,6 +165,57 @@ module DocumentsWithFooterToPdf
 
   def self.debug( obj )
     return obj[:params][:console][:silent]
+  end
+
+
+  def self.validate_generate( folder, silent, options )
+    messages = {
+      folder: [],
+      silent: [],
+      options: [],
+      other: []
+   }
+
+    if folder.class.to_s.eql?( 'String' )
+      if File.directory?( folder )
+
+      else
+        messages[:folder].push( 'Is not a valid path or not exist.')
+      end
+    else
+      messages[:folder].push( 'Is not Type "String"')
+    end
+
+    if silent.class.to_s.eql?( 'Symbol' )
+      if [:silent, :short, :detail].include?( silent )
+
+      else
+        messages[:silent].push( 'Is not :silent, :short or :detail')
+      end
+    else
+      messages[:silent].push( 'Is not Type "Symbol"')
+    end
+
+    if vars.class.to_s.eql?( 'Hash' )
+      messages[:options] = self.options_update( vars, template, 'check_options' )
+    else
+      messages[:options].push( 'Is not Type "Hash".') 
+    end
+
+    valid = messages.keys.map { | key | messages[ key ].length }.sum == 0
+
+    if !valid
+      puts 'Following errors occured:'
+      messages.keys.each do | key |
+        if messages[ key ].length != 0
+          puts "  #{key[ 0, 1 ].upcase}#{key[ 1, key.length ]}"
+          messages[ key ].each do | m |
+            puts "  - #{m}"
+          end
+        end
+      end
+    end
+    return valid
   end
 
 
@@ -189,7 +239,7 @@ module DocumentsWithFooterToPdf
         a = obj[:params][:image][:density].to_s
         b = obj[:path][:children][:tmp][:children][:jpg][:full]
         c = File.basename( file ).split( '.' )[ 0..-2 ].join( '.' )
-        cmd = "convert -density #{a}  -background white -alpha remove \"#{file}\" \"#{b}#{c}.jpg\""
+        cmd = "convert -density #{a} -background white -alpha remove \"#{file}\" \"#{b}#{c}.jpg\""
 
         out = IO.popen( cmd )
         out.readlines
