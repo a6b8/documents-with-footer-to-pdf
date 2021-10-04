@@ -3,14 +3,14 @@
 </a>
 
 Add a footer to each document and create a single .pdf file all in one command.
+
 <br>
-<br>
-<br>
+
 <a href="#table-of-contents">
 <img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/documents-with-footer-to-pdf/readme/headlines/examples.svg" height="38px" name="examples" alt="Examples"></a>
 
 
-```HEADLINE, TIMESTAMP, PAGE_CURRENT```<br>
+**Options:**: ```HEADLINE, TIMESTAMP, PAGE_CURRENT```<br>
 
 ```ruby
 { 
@@ -30,7 +30,7 @@ Add a footer to each document and create a single .pdf file all in one command.
 
 <br><br>
 
-```HEADLINE, SUBHEADING, text, PAGE_CURRENT, PAGE_TOTAL, timestamp_strf```
+**Options:** ```HEADLINE, SUBHEADING, text, PAGE_CURRENT, PAGE_TOTAL, timestamp_strf```
 
 ```ruby
 { 
@@ -50,7 +50,7 @@ Add a footer to each document and create a single .pdf file all in one command.
 
 <br>
 
-```TIMESTAMP, ENUMERATOR_CHAR, HEADLINE, PAGE_CURRENT```
+**Options:** ```TIMESTAMP, ENUMERATOR_CHAR, HEADLINE, PAGE_CURRENT```
 
 ```ruby
 { 
@@ -76,15 +76,15 @@ Add a footer to each document and create a single .pdf file all in one command.
 
 1. [Quickstart](#quickstart)<br>
 2. [Setup](#setup)<br>
-2. [Methods](#methods)<br>
-3. [Options](#options)<br>
-4. [Selectors](#selectors-main)<br>
-5. [Contributing](#contributing)<br>
-6. [Limitations](#limitations)<br>
-7. [Credits](#credits)<br>
-8. [License](#license)<br>
-9.  [Code of Conduct](#code-of-conduct)<br>
-10. [Support my Work](#support-my-work)<br>
+3. [Methods](#methods)<br>
+4. [Options](#options)<br>
+5. [Selectors](#selectors-main)<br>
+6. [Contributing](#contributing)<br>
+7. [Limitations](#limitations)<br>
+8. [Credits](#credits)<br>
+9. [License](#license)<br>
+10. [Code of Conduct](#code-of-conduct)<br>
+11. [Support my Work](#support-my-work)<br>
 
 <br>
 
