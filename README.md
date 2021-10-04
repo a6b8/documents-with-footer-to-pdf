@@ -75,14 +75,15 @@ Add a footer to each document and create a single .pdf file all in one command.
 <br>
 
 1. [Quickstart](#quickstart)<br>
-2. [Parameters](#parameters)<br>
+2. [Setup](#setup)<br>
+2. [Methods](#methods)<br>
 3. [Options](#options)<br>
 4. [Selectors](#selectors)<br>
 5. [Contributing](#contributing)<br>
 6. [Limitations](#limitations)<br>
 7. [Credits](#credits)<br>
 8. [License](#license)<br>
-9. [Code of Conduct](#code-of-conduct)<br>
+9.  [Code of Conduct](#code-of-conduct)<br>
 10. [Support my Work](#support-my-work)<br>
 
 <br>
