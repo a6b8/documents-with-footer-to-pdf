@@ -78,7 +78,7 @@ Add a footer to each document and create a single .pdf file all in one command.
 2. [Setup](#setup)<br>
 2. [Methods](#methods)<br>
 3. [Options](#options)<br>
-4. [Selectors](#selectors)<br>
+4. [Selectors](#selectors-main)<br>
 5. [Contributing](#contributing)<br>
 6. [Limitations](#limitations)<br>
 7. [Credits](#credits)<br>
@@ -220,10 +220,11 @@ More Information on ```strf``` format: https://apidock.com/ruby/DateTime/strftim
 | D.5. | Search Suffixs |:params__search__suffixs | `["jpg", "png", "pdf"]` | Array | Types of suffixes which are included (Supported jpg, png, pdf) |
 | D.6. | Console Length |:params__console__length | `50` | Integer | Change length of console output |
 </a>
+
 <br>
-<br>
+
 <a href="#table-of-contents">
-<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/documents-with-footer-to-pdf/readme/headlines/selectors.svg" height="38px" name="selectors" alt="Selectors">
+<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/documents-with-footer-to-pdf/readme/headlines/selectors.svg" height="38px" name="selectors-main" alt="Selectors">
 </a>
 
 | Selector | Example | Description |
