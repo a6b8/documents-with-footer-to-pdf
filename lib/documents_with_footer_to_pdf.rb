@@ -32,7 +32,7 @@ module DocumentsWithFooterToPdf
             name: '0-result-{{SALT}}',
             files: {
               result: {
-                name: '0-result-{{SALT}}.pdf'
+                name: 'result.pdf'
               }
             }
           }
@@ -149,8 +149,9 @@ module DocumentsWithFooterToPdf
       hash[:path][:root] = folder
       hash[:params][:console][:silent] = silent == :silent ? true : false
       hash[:params][:console][:mode] = !hash[:params][:console][:silent] ? silent : ''
+       
+      hash = self.options_update( options, hash, 'set_options' ) 
       hash[:path] = LocalPathBuilder.generate( hash[:path], :silent, Time.now.to_i.to_s )
-      hash = self.options_update( options, hash, 'set_options' )  
 
       self.footer_image( hash )
       prepares = self.footer_prepare( hash )
@@ -270,7 +271,7 @@ module DocumentsWithFooterToPdf
       if File.directory?( folder )
 
       else
-        messages[:folder].push( 'Is not a valid path or not exist.')
+        messages[:folder].push( "\"#{folder}\" is not a valid path or not exist.")
       end
     else
       messages[:folder].push( 'Is not Type "String"')
