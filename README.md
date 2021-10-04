@@ -273,17 +273,12 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/a6b8/d
 </a>
 
 This gem depend on following gems:
-- **local_path_builder** <br>
-  https://github.com/a6b8/local-path-builder-for-ruby <br>
-- **FileUtils** <br>
-  https://ruby-doc.org/stdlib-2.4.1/libdoc/fileutils/rdoc/FileUtils.html <br>
-- **combine_pdf** <br>
-  https://github.com/boazsegev/combine_pdf <br>
-- **prawn** <br>
-  https://github.com/prawnpdf/prawn <br>
-- **image magick** <br>
-  https://imagemagick.org/script/convert.php
-
+- [local_path_builder](https://github.com/a6b8/local-path-builder-for-ruby) <br>
+- [FileUtils](https://ruby-doc.org/stdlib-2.4.1/libdoc/fileutils/rdoc/FileUtils.html) <br>
+- [combine_pdf](https://github.com/boazsegev/combine_pdf) <br>
+- [prawn](https://github.com/prawnpdf/prawn) <br>
+- [image magick](https://imagemagick.org/script/convert.php)
+  
 <br>
 
 <a href="#table-of-contents">
