@@ -67,7 +67,7 @@ Add a footer to each document and create a single .pdf file all in one command.
 <img src="https://github.com/a6b8/a6b8/blob/main/docs/documents-with-footer-to-pdf/readme/examples/c.jpg?raw=true">
 </a>
 
-<br>
+<br><br>
 
 <a href="#headline">
 <img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/documents-with-footer-to-pdf/readme/headlines/table-of-contents.svg" height="38px" name="table-of-contents" alt="Table of Contents">
