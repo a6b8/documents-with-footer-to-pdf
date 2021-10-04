@@ -32,7 +32,7 @@ tests = [
 rs = []
 tests.each.with_index do | test, index |
     folder = "result-#{index }"
-    test[:path__children__pdf_combined__name] = 
+    test[:path__children__pdf_combined__name] = folder
     DocumentsWithFooterToPdf.generate( path, :silent, test )
     check = "#{path}#{folder}/result.pdf"
     puts "[#{index}]  #{check}"

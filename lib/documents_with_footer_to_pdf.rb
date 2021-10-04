@@ -5,6 +5,7 @@ require 'local_path_builder'
 require 'FileUtils'
 require 'combine_pdf'
 require 'prawn'
+
 Prawn::Fonts::AFM.hide_m17n_warning = true
 
 module DocumentsWithFooterToPdf
