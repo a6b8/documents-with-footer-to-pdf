@@ -10,7 +10,7 @@ Add a footer to each document and create a single .pdf file all in one command.
 <img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/documents-with-footer-to-pdf/readme/headlines/examples.svg" height="38px" name="examples" alt="Examples"></a>
 
 
-**Options:**: ```HEADLINE, TIMESTAMP, PAGE_CURRENT```<br>
+**Options:** ```HEADLINE, TIMESTAMP, PAGE_CURRENT```<br>
 
 ```ruby
 { 
