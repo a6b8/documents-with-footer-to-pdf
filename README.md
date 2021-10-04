@@ -1,5 +1,5 @@
 <a href="#table-of-contents">
-<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/documents-with-footer-to-pdf/readme/headlines/documents-with-footer-to-pdf.svg" height="55px" name="Documents with Footer to Pdf for Ruby" alt="# Documents with Footer to .pdf for Ruby">
+<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/documents-with-footer-to-pdf/readme/headlines/documents-with-footer-to-pdf.svg" height="45px" name="Documents with Footer to Pdf for Ruby" alt="# Documents with Footer to .pdf for Ruby">
 </a>
 
 Add a footer to each document and create a single .pdf file all in one command.
@@ -7,73 +7,70 @@ Add a footer to each document and create a single .pdf file all in one command.
 <br>
 <br>
 <a href="#table-of-contents">
-<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/documents-with-footer-to-pdf/readme/headlines/examples.svg" height="55px" name="examples" alt="Examples">
+<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/documents-with-footer-to-pdf/readme/headlines/examples.svg" height="38px" name="examples" alt="Examples"></a>
+
+
+```HEADLINE, TIMESTAMP, PAGE_CURRENT```<br>
+
+```ruby
+{ 
+    footer__table__left__top__text: '<<--ENUMERATOR_INTEGER-->>. <<--HEADLINE-->>',
+    footer__table__left__bottom__text: '<<--TIMESTAMP-->>',
+    footer__table__center__top__text: '',
+    footer__table__center__bottom__text: '',
+    footer__table__right__top__text: '<<--PAGE_CURRENT-->>',
+    footer__table__right__bottom__text: '',
+}
+```
+
+**Output**
+
+<a src="">
+<img src="https://github.com/a6b8/a6b8/blob/main/docs/documents-with-footer-to-pdf/readme/examples/a.jpg?raw=true"></a>
+
+<br><br>
+
+```HEADLINE, SUBHEADING, text, PAGE_CURRENT, PAGE_TOTAL, timestamp_strf```
+
+```ruby
+{ 
+    footer__table__left__top__text: '<<--ENUMERATOR_ROMAN-->>. <<--HEADLINE-->>',
+    footer__table__left__bottom__text: '<<--SUBHEADING-->>',
+    footer__table__center__top__text: 'Application',
+    footer__table__center__bottom__text: 'John Doe',
+    footer__table__right__top__text: '<<--TIMESTAMP-->>',
+    footer__table__right__bottom__text: '<<--PAGE_CURRENT-->> of <<--PAGE_TOTAL-->>',
+    selectors__timestamp__strf: '%A, %e %B %Y'
+}
+```
+**Output**
+
+<a src="">
+<img src="https://github.com/a6b8/a6b8/blob/main/docs/documents-with-footer-to-pdf/readme/examples/b.jpg?raw=true"></a>
+
+<br><br>
+
+```TIMESTAMP, ENUMERATOR_CHAR, HEADLINE, PAGE_CURRENT```
+
+```ruby
+{ 
+    footer__table__left__top__text: '<<--TIMESTAMP-->>',
+    footer__table__left__bottom__text: '',
+    footer__table__center__top__text: '<<--ENUMERATOR_CHAR-->> <<--HEADLINE-->>',
+    footer__table__center__bottom__text: '',
+    footer__table__right__top__text: '<<--PAGE_CURRENT-->>',
+    footer__table__right__bottom__text: '',
+}
+```
+
+<a src="">
+<img src="https://github.com/a6b8/a6b8/blob/main/docs/documents-with-footer-to-pdf/readme/examples/c.jpg?raw=true">
 </a>
 
-### Example 1
+<br><br>
 
-**Filename**: 
-```5--HEADING--Subheadline.png```
-
-```ruby
-    { 
-        footer__table__left__top__text: '<<--ENUMERATOR_INTEGER-->>. <<--HEADLINE-->>',
-        footer__table__left__bottom__text: '<<--TIMESTAMP-->>',
-        footer__table__center__top__text: '',
-        footer__table__center__bottom__text: '',
-        footer__table__right__top__text: '<<--PAGE_CURRENT-->>',
-        footer__table__right__bottom__text: '',
-    }
-```
-
-**Output**
-
-<img src="https://github.com/a6b8/a6b8/blob/main/docs/documents-with-footer-to-pdf/readme/examples/a.jpg?raw=true">
-
-
-### Example 2
-
-**Filename**: 
-```5--HEADING--Subheadline.png```
-
-```ruby
-    { 
-        footer__table__left__top__text: '<<--ENUMERATOR_ROMAN-->>. <<--HEADLINE-->>',
-        footer__table__left__bottom__text: '<<--SUBHEADING-->>',
-        footer__table__center__top__text: 'Application',
-        footer__table__center__bottom__text: 'John Doe',
-        footer__table__right__top__text: '<<--TIMESTAMP-->>',
-        footer__table__right__bottom__text: '<<--PAGE_CURRENT-->> of <<--PAGE_TOTAL-->>',
-        selectors__timestamp__strf: '%A, %e %B %Y'
-    }
-```
-**Output**
-
-<img src="https://github.com/a6b8/a6b8/blob/main/docs/documents-with-footer-to-pdf/readme/examples/b.jpg?raw=true">
-
-
-### Example 3
-
-**Filename**: 
-```5--HEADING--Subheadline.png```
-
-```ruby
-    { 
-        footer__table__left__top__text: '<<--TIMESTAMP-->>',
-        footer__table__left__bottom__text: '',
-        footer__table__center__top__text: '<<--ENUMERATOR_CHAR-->> <<--HEADLINE-->>',
-        footer__table__center__bottom__text: '',
-        footer__table__right__top__text: '<<--PAGE_CURRENT-->>',
-        footer__table__right__bottom__text: '',
-    }
-```
-
-<img src="https://github.com/a6b8/a6b8/blob/main/docs/documents-with-footer-to-pdf/readme/examples/c.jpg?raw=true">
-
-<br>
-<br>
 <a href="#table-of-contents">
-<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/documents-with-footer-to-pdf/readme/headlines/table-of-contents.svg" height="55px" name="table-of-contents" alt="Table of Contents">
+<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/documents-with-footer-to-pdf/readme/headlines/table-of-contents.svg" height="38px" name="table-of-contents" alt="Table of Contents">
 </a>
 <br>
 
@@ -89,27 +86,28 @@ Add a footer to each document and create a single .pdf file all in one command.
 10. [Support my Work](#support-my-work)<br>
 
 <br>
-<br>
+
 <a href="#table-of-contents">
-<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/documents-with-footer-to-pdf/readme/headlines/quickstart.svg" height="55px" name="quickstart" alt="Quickstart">
+<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/documents-with-footer-to-pdf/readme/headlines/quickstart.svg" height="38px" name="quickstart" alt="Quickstart">
 </a>
 
 ```ruby
-    require 'documents_with_footer_to_pdf'
+require 'documents_with_footer_to_pdf'
 
 
-    your_folder = './1-test/'
+your_folder = './1-test/'
 
-    DocumentsWithFooterToPdf.generate( 
-        your_folder, 
-        :short, 
-        {}
+DocumentsWithFooterToPdf.generate( 
+    your_folder, 
+    :short, 
+    {}
 ) 
 ```
+
 <br>
-<br>
+
 <a href="#table-of-contents">
-<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/local-path-builder-for-ruby/readme/headlines/setup.svg" height="55px" name="setup" alt="Setup">
+<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/local-path-builder-for-ruby/readme/headlines/setup.svg" height="38px" name="setup" alt="Setup">
 </a>
 
 Add this line to your application's Gemfile:
@@ -132,29 +130,29 @@ On Rubygems:
 - Profile: https://rubygems.org/profiles/a6b8
 
 <br>
-<br>
+
 <a href="#table-of-contents">
-<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/documents-with-footer-to-pdf/readme/headlines/methods.svg" height="55px" name="methods" alt="Methods">
+<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/documents-with-footer-to-pdf/readme/headlines/methods.svg" height="38px" name="methods" alt="Methods">
 </a>
 
 ### .get_options()
 ```ruby
-    require 'documents_with_footer_to_pdf'
+require 'documents_with_footer_to_pdf'
 
-    hash = DocumentsWithFooterToPdf.get_options() 
-    # => { path: 
+hash = DocumentsWithFooterToPdf.get_options() 
+# => { path: 
 ```
 
 
 ### .generate()
 ```ruby
-    require 'documents_with_footer_to_pdf'
+require 'documents_with_footer_to_pdf'
 
-    hash = DocumentsWithFooterToPdf.generate( 
-        folder, 
-        console_mode,  
-        options 
-    )
+hash = DocumentsWithFooterToPdf.generate( 
+    folder, 
+    console_mode,  
+    options 
+)
 ```
 
 **Input**
@@ -166,11 +164,11 @@ On Rubygems:
 
 **Return**<br>
 Boolean   
+
 <br>
-<br>
-<br>
+
 <a href="#table-of-contents">
-<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/documents-with-footer-to-pdf/readme/headlines/options.svg" height="55px" name="options" alt="Options">
+<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/documents-with-footer-to-pdf/readme/headlines/options.svg" height="38px" name="options" alt="Options">
 </a>
 
 ### Path
@@ -224,7 +222,7 @@ More Information on ```strf``` format: https://apidock.com/ruby/DateTime/strftim
 <br>
 <br>
 <a href="#table-of-contents">
-<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/documents-with-footer-to-pdf/readme/headlines/selectors.svg" height="55px" name="selectors" alt="Selectors">
+<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/documents-with-footer-to-pdf/readme/headlines/selectors.svg" height="38px" name="selectors" alt="Selectors">
 </a>
 
 | Selector | Example | Description |
@@ -245,30 +243,31 @@ More Information on ```strf``` format: https://apidock.com/ruby/DateTime/strftim
 Use double hyphens '--' as limiter 
 
 **Struct**:
-#{SINGLE DIGIT/CHAR}--#{HEADLINE}--#{SUBHEADING}.suffix
+```#{SINGLE DIGIT/CHAR}```--```#{HEADLINE}```--```#{SUBHEADING}```.suffix
 
 **Example Filename**: ```C--HEADING--Subheadline.png```
 
 <br>
-<br>
+
 <a href="#table-of-contents">
-<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/documents-with-footer-to-pdf/readme/headlines/contributing.svg" height="55px" name="contributing" alt="Contributing">
+<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/documents-with-footer-to-pdf/readme/headlines/contributing.svg" height="38px" name="contributing" alt="Contributing">
 </a>
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/a6b8/documents-with-footer-to-pdf. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/a6b8/documents-with-footer-to-pdf/blob/master/CODE_OF_CONDUCT.md).
+
 <br>
-<br>
-<br>
+
 <a href="#table-of-contents">
-<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/documents-with-footer-to-pdf/readme/headlines/limitations.svg" height="55px" name="limitations" alt="Limitations">
+<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/documents-with-footer-to-pdf/readme/headlines/limitations.svg" height="38px" name="limitations" alt="Limitations">
 </a>
+
 - Made for local usage
 - Some pdf fonts are not supported.
 <br>
 <br>
 
 <a href="#table-of-contents">
-<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/documents-with-footer-to-pdf/readme/headlines/credits.svg" height="55px" name="credits" alt="Credits">
+<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/documents-with-footer-to-pdf/readme/headlines/credits.svg" height="38px" name="credits" alt="Credits">
 </a>
 
 This gem depend on following gems:
@@ -282,27 +281,27 @@ This gem depend on following gems:
   https://github.com/prawnpdf/prawn <br>
 - **image magick** <br>
   https://imagemagick.org/script/convert.php
-<br>
+
 <br>
 
 <a href="#table-of-contents">
-<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/documents-with-footer-to-pdf/readme/headlines/license.svg" height="55px" name="license" alt="License">
+<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/documents-with-footer-to-pdf/readme/headlines/license.svg" height="38px" name="license" alt="License">
 </a>
 
 The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+
 <br>
-<br>
-<br>
+
 <a href="#table-of-contents">
-<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/documents-with-footer-to-pdf/readme/headlines/code-of-conduct.svg" height="55px" name="code-of-conduct" alt="Code of Conduct">
+<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/documents-with-footer-to-pdf/readme/headlines/code-of-conduct.svg" height="38px" name="code-of-conduct" alt="Code of Conduct">
 </a>
     
 Everyone interacting in the documents-with-footer-to-pdf project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/a6b8/documents-with-footer-to-pdf/blob/master/CODE_OF_CONDUCT.md).
+
 <br>
-<br>
-<br>
+
 <a href="#table-of-contents">
-<img href="#table-of-contents" src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/documents-with-footer-to-pdf/readme/headlines/support-my-work.svg" height="55px" name="support-my-work" alt="Support my Work">
+<img href="#table-of-contents" src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/documents-with-footer-to-pdf/readme/headlines/support-my-work.svg" height="38px" name="support-my-work" alt="Support my Work">
 </a>
     
 Donate by [https://www.paypal.com](https://www.paypal.com/donate?hosted_button_id=XKYLQ9FBGC4RG)
