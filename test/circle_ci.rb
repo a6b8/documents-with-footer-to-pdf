@@ -1,4 +1,5 @@
 require './lib/documents_with_footer_to_pdf'
+require 'fileUtils'
 
 path = './test/example/'
 tests = [
