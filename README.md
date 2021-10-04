@@ -263,7 +263,7 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/a6b8/d
 
 - Made for local usage
 - Some pdf fonts are not supported.
-<br>
+
 <br>
 
 <a href="#table-of-contents">
