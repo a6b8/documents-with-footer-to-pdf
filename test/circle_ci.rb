@@ -1,6 +1,6 @@
 require './lib/documents_with_footer_to_pdf'
 
-path = './test/example/'
+path = Dir.pwd  + '/test/example/'
 tests = [
     { 
         footer__table__left__top__text: '<<--ENUMERATOR_ROMAN-->>. <<--HEADLINE-->>',
@@ -31,7 +31,7 @@ tests = [
 
 rs = []
 tests.each.with_index do | test, index |
-    folder = Dir.pwd  + "/result-#{index }"
+    folder = "/result-#{index }"
     test[:path__children__pdf_combined__name] = folder
     DocumentsWithFooterToPdf.generate( path, :silent, test )
     check = "#{path}#{folder}/result.pdf"
