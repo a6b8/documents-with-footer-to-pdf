@@ -2,7 +2,7 @@
 
 require_relative "documents_with_footer_to_pdf/version"
 require 'local_path_builder'
-require 'FileUtils'
+require 'fileutils'
 require 'combine_pdf'
 require 'prawn'
 
