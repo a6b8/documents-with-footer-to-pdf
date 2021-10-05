@@ -38,7 +38,7 @@ tests.each.with_index do | test, index |
     puts "[#{index}]  #{check}"
     rs.push( File.exist?( check ) )
 end 
-
+ 
 if rs.all?
     puts "All tests passed."
     exit 0
