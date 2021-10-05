@@ -28,7 +28,7 @@ tests = [
         footer__table__right__bottom__text: '',
     }
 ]
-
+ 
 rs = []
 tests.each.with_index do | test, index |
     folder = "/result-#{index }"
