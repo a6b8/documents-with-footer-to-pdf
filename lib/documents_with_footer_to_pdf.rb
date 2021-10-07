@@ -153,7 +153,7 @@ module DocumentsWithFooterToPdf
        
       hash = self.options_update( options, hash, 'set_options' ) 
       hash[:path] = LocalPathBuilder.generate( hash[:path], :silent, Time.now.to_i.to_s )
-
+puts hash[:path]
       self.footer_image( hash )
       prepares = self.footer_prepare( hash )
       self.footer_generate( prepares, hash )
