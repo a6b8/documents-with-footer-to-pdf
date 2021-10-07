@@ -31,6 +31,7 @@ tests = [
  
 rs = []
 # path = Dir.pwd  + '/test/example/'
+puts Dir.pwd
 path = './test/example/'
 puts File.directory?( path )
 tests.each.with_index do | test, index |
