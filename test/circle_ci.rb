@@ -32,6 +32,7 @@ tests = [
 rs = []
 # path = Dir.pwd  + '/test/example/'
 path = '/test/example/'
+puts File.directory?( path )
 tests.each.with_index do | test, index |
     folder = "result-#{index }"
     test[:path__children__pdf_combined__name] = folder
