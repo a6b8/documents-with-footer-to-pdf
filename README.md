@@ -1,5 +1,5 @@
 <a href="#table-of-contents">
-<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/documents-with-footer-to-pdf/readme/headlines/documents-with-footer-to-pdf.svg" height="45px" name="headline" alt="# Documents with Footer to .pdf for Ruby">
+<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/documents-with-footer-to-pdf/readme/headlines/headline.svg" height="45px" name="# Documents with Footer to .pdf for Ruby" alt="Documents with Footer to .pdf for Ruby">
 </a>
 
 Add a footer to each document and create a single .pdf file all in one command.
