@@ -1,5 +1,5 @@
 <a href="#table-of-contents">
-<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/documents-with-footer-to-pdf/readme/headlines/headline.svg" height="45px" name="# Documents with Footer to .pdf for Ruby" alt="Documents with Footer to .pdf for Ruby">
+<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/assets/headlines/custom/documents-with-footer-to-.pdf-for-ruby.svg" height="45px" name="# Documents with Footer to .pdf for Ruby" alt="Documents with Footer to .pdf for Ruby">
 </a>
 
 Add a footer to each document and create a single .pdf file all in one command.
@@ -7,7 +7,7 @@ Add a footer to each document and create a single .pdf file all in one command.
 <br>
 
 <a href="#table-of-contents">
-<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/documents-with-footer-to-pdf/readme/headlines/examples.svg" height="38px" name="examples" alt="Examples"></a>
+<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/assets/headlines/default/examples.svg" height="45px" name="examples" alt="Examples"></a>
 
 
 **Options:** ```HEADLINE, TIMESTAMP, PAGE_CURRENT```<br>
@@ -70,7 +70,7 @@ Add a footer to each document and create a single .pdf file all in one command.
 <br><br>
 
 <a href="#headline">
-<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/documents-with-footer-to-pdf/readme/headlines/table-of-contents.svg" height="38px" name="table-of-contents" alt="Table of Contents">
+<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/assets/headlines/default/table-of-contents.svg" height="45px" name="table-of-contents" alt="Table of Contents">
 </a>
 <br>
 
@@ -89,7 +89,7 @@ Add a footer to each document and create a single .pdf file all in one command.
 <br>
 
 <a href="#table-of-contents">
-<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/documents-with-footer-to-pdf/readme/headlines/quickstart.svg" height="38px" name="quickstart" alt="Quickstart">
+<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/assets/headlines/default/quickstart.svg" height="45px" name="quickstart" alt="Quickstart">
 </a>
 
 ```ruby
@@ -108,7 +108,7 @@ DocumentsWithFooterToPdf.generate(
 <br>
 
 <a href="#table-of-contents">
-<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/local-path-builder-for-ruby/readme/headlines/setup.svg" height="38px" name="setup" alt="Setup">
+<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/local-path-builder-for-ruby/readme/headlines/setup.svg" height="45px" name="setup" alt="Setup">
 </a>
 
 Add this line to your application's Gemfile:
@@ -133,7 +133,7 @@ On Rubygems:
 <br>
 
 <a href="#table-of-contents">
-<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/documents-with-footer-to-pdf/readme/headlines/methods.svg" height="38px" name="methods" alt="Methods">
+<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/assets/headlines/default/methods.svg" height="45px" name="methods" alt="Methods">
 </a>
 
 ### .get_options()
@@ -169,7 +169,7 @@ Boolean
 <br>
 
 <a href="#table-of-contents">
-<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/documents-with-footer-to-pdf/readme/headlines/options.svg" height="38px" name="options" alt="Options">
+<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/assets/headlines/default/options.svg" height="45px" name="options" alt="Options">
 </a>
 
 ### Path
@@ -224,7 +224,7 @@ More Information on ```strf``` format: https://apidock.com/ruby/DateTime/strftim
 <br>
 
 <a href="#table-of-contents">
-<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/documents-with-footer-to-pdf/readme/headlines/selectors.svg" height="38px" name="selectors-main" alt="Selectors">
+<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/assets/headlines/default/selectors.svg" height="45px" name="selectors-main" alt="Selectors">
 </a>
 
 | Selector | Example | Description |
@@ -252,7 +252,7 @@ Use double hyphens '--' as limiter
 <br>
 
 <a href="#table-of-contents">
-<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/documents-with-footer-to-pdf/readme/headlines/contributing.svg" height="38px" name="contributing" alt="Contributing">
+<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/assets/headlines/default/contributing.svg" height="45px" name="contributing" alt="Contributing">
 </a>
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/a6b8/documents-with-footer-to-pdf. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/a6b8/documents-with-footer-to-pdf/blob/master/CODE_OF_CONDUCT.md).
@@ -260,7 +260,7 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/a6b8/d
 <br>
 
 <a href="#table-of-contents">
-<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/documents-with-footer-to-pdf/readme/headlines/limitations.svg" height="38px" name="limitations" alt="Limitations">
+<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/assets/headlines/default/limitations.svg" height="45px" name="limitations" alt="Limitations">
 </a>
 
 - Made for local usage
@@ -269,7 +269,7 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/a6b8/d
 <br>
 
 <a href="#table-of-contents">
-<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/documents-with-footer-to-pdf/readme/headlines/credits.svg" height="38px" name="credits" alt="Credits">
+<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/assets/headlines/default/credits.svg" height="45px" name="credits" alt="Credits">
 </a>
 
 This gem depend on following gems:
@@ -282,7 +282,7 @@ This gem depend on following gems:
 <br>
 
 <a href="#table-of-contents">
-<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/documents-with-footer-to-pdf/readme/headlines/license.svg" height="38px" name="license" alt="License">
+<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/assets/headlines/default/license.svg" height="45px" name="license" alt="License">
 </a>
 
 The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
@@ -290,7 +290,7 @@ The gem is available as open source under the terms of the [MIT License](https:/
 <br>
 
 <a href="#table-of-contents">
-<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/documents-with-footer-to-pdf/readme/headlines/code-of-conduct.svg" height="38px" name="code-of-conduct" alt="Code of Conduct">
+<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/assets/headlines/default/code-of-conduct.svg" height="45px" name="code-of-conduct" alt="Code of Conduct">
 </a>
     
 Everyone interacting in the documents-with-footer-to-pdf project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/a6b8/documents-with-footer-to-pdf/blob/master/CODE_OF_CONDUCT.md).
@@ -298,7 +298,7 @@ Everyone interacting in the documents-with-footer-to-pdf project's codebases, is
 <br>
 
 <a href="#table-of-contents">
-<img href="#table-of-contents" src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/documents-with-footer-to-pdf/readme/headlines/support-my-work.svg" height="38px" name="support-my-work" alt="Support my Work">
+<img href="#table-of-contents" src="https://raw.githubusercontent.com/a6b8/a6b8/main/assets/headlines/default/star-us.svg" height="45px" name="star-us" alt="Star us">
 </a>
-    
-Donate by [https://www.paypal.com](https://www.paypal.com/donate?hosted_button_id=XKYLQ9FBGC4RG)
+
+Please ⭐️ star this Project, every ⭐️ star makes us very happy!
