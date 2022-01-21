@@ -108,7 +108,7 @@ DocumentsWithFooterToPdf.generate(
 <br>
 
 <a href="#table-of-contents">
-<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/local-path-builder-for-ruby/readme/headlines/setup.svg" height="45px" name="setup" alt="Setup">
+<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/assets/headlines/default/setup.svg" height="45px" name="setup" alt="Setup">
 </a>
 
 Add this line to your application's Gemfile:
@@ -224,7 +224,7 @@ More Information on ```strf``` format: https://apidock.com/ruby/DateTime/strftim
 <br>
 
 <a href="#table-of-contents">
-<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/assets/headlines/default/selectors.svg" height="45px" name="selectors-main" alt="Selectors">
+<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/assets/headlines/custom/selectors.svg" height="45px" name="selectors" alt="Selectors">
 </a>
 
 | Selector | Example | Description |
