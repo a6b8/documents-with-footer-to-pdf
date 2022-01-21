@@ -26,7 +26,7 @@ Add a footer to each document and create a single .pdf file all in one command.
 **Output**
 
 <a src="">
-<img src="https://github.com/a6b8/a6b8/blob/main/docs/documents-with-footer-to-pdf/readme/examples/a.jpg?raw=true"></a>
+<img src="https://github.com/a6b8/a6b8/blob/main/assets/additional/documents-with-footer-to-pdf/examples/a.jpg?raw=true"></a>
 
 <br><br>
 
@@ -46,7 +46,7 @@ Add a footer to each document and create a single .pdf file all in one command.
 **Output**
 
 <a src="">
-<img src="https://github.com/a6b8/a6b8/blob/main/docs/documents-with-footer-to-pdf/readme/examples/b.jpg?raw=true"></a>
+<img src="https://github.com/a6b8/a6b8/blob/main/assets/additional/documents-with-footer-to-pdf/examples/b.jpg?raw=true"></a>
 
 <br>
 
@@ -64,7 +64,7 @@ Add a footer to each document and create a single .pdf file all in one command.
 ```
 
 <a src="">
-<img src="https://github.com/a6b8/a6b8/blob/main/docs/documents-with-footer-to-pdf/readme/examples/c.jpg?raw=true">
+<img src="https://github.com/a6b8/a6b8/blob/main/assets/additional/documents-with-footer-to-pdf/examples/c.jpg?raw=true">
 </a>
 
 <br><br>
