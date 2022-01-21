@@ -224,7 +224,7 @@ More Information on ```strf``` format: https://apidock.com/ruby/DateTime/strftim
 <br>
 
 <a href="#table-of-contents">
-<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/assets/headlines/custom/selectors.svg" height="45px" name="selectors" alt="Selectors">
+<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/assets/headlines/default/selectors.svg" height="45px" name="selectors" alt="Selectors">
 </a>
 
 | Selector | Example | Description |
